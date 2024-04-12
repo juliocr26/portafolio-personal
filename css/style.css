@@ -1,0 +1,239 @@
+:root{
+   --color-de-fondo: rgb(58, 58, 58);
+   --color-de-fondo-alternativo: #010c19;
+   --color-de-link: rgb(246, 246, 246);
+   --color-lineas: silver;
+   --color-de-texto:whitesmoke;
+   --tamanio-icono:2.25rem;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body {
+    box-sizing: border-box;
+    background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);  
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    color: var(--color-de-texto);
+    width: 100vw;
+}
+
+.cuerpo{
+    width: 100%;
+}
+
+.fondo-semi-transparente{
+    background-color: rgba(0,0,0,.1);
+    border-radius: 1rem;
+    padding: .25rem;
+    margin: .25rem;
+}
+ol, ul,li {
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: var(--color-de-link);
+}
+
+.contenedores{
+    width: calc(100% - 2rem);
+    margin: auto;
+    margin-top: 1rem;
+}
+
+.aparecer{
+    position: relative;
+    transform: translateY(5rem);
+    opacity: 0;
+    transition: 1s all ease;
+}
+
+.aparecer.activo{
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.texto-centrado{
+    text-align: center;
+}
+
+.texto-justificado{
+    text-align: justify;
+}
+
+.btn_home_boton{
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    transition: 1s all;
+    z-index: 99;
+    border-radius: 100%;
+    border: none;
+    background-color: whitesmoke;
+    width: 2rem;
+    height: 2rem;
+    align-items: center;
+    cursor: pointer;
+}
+/*Tablet*/
+@media screen and (min-width: 768px) {
+    body{
+        font-size: 20px;
+    }
+    .cuerpo{
+        width: 95%;
+        margin: auto;
+    }
+
+    .contenedores{
+        padding-left:1rem;
+        padding-right: 1rem;
+    }
+    
+}
+
+/* Fondo Animado */
+@media screen and (min-width:1024px) {
+    
+    .cuerpo{
+        width: 95%;
+        margin: auto;
+        margin-top: 1rem;
+        max-width: 1200px;
+    }
+
+    body{
+       background: #0611e1; 
+    }
+
+    .contenedores{
+        padding: 1rem;
+    }
+
+    .area{
+        width: 100%;
+        height:100vh;    
+        position: fixed;
+    }
+
+    .circles{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+
+    .circles li{
+        position: absolute;
+        display: block;
+        list-style: none;
+        width: 20px;
+        height: 20px;
+        background: rgba(255, 255, 255, 0.2);
+        animation: animate 25s linear infinite;
+        bottom: -150px;
+        
+    }
+
+    .circles li:nth-child(1){
+        left: 25%;
+        width: 80px;
+        height: 80px;
+        animation-delay: 0s;
+    }
+
+
+    .circles li:nth-child(2){
+        left: 10%;
+        width: 20px;
+        height: 20px;
+        animation-delay: 2s;
+        animation-duration: 12s;
+    }
+
+    .circles li:nth-child(3){
+        left: 70%;
+        width: 20px;
+        height: 20px;
+        animation-delay: 4s;
+    }
+
+    .circles li:nth-child(4){
+        left: 40%;
+        width: 60px;
+        height: 60px;
+        animation-delay: 0s;
+        animation-duration: 18s;
+    }
+
+    .circles li:nth-child(5){
+        left: 65%;
+        width: 20px;
+        height: 20px;
+        animation-delay: 0s;
+    }
+
+    .circles li:nth-child(6){
+        left: 75%;
+        width: 110px;
+        height: 110px;
+        animation-delay: 3s;
+    }
+
+    .circles li:nth-child(7){
+        left: 35%;
+        width: 150px;
+        height: 150px;
+        animation-delay: 7s;
+    }
+
+    .circles li:nth-child(8){
+        left: 50%;
+        width: 25px;
+        height: 25px;
+        animation-delay: 15s;
+        animation-duration: 45s;
+    }
+
+    .circles li:nth-child(9){
+        left: 20%;
+        width: 15px;
+        height: 15px;
+        animation-delay: 2s;
+        animation-duration: 35s;
+    }
+
+    .circles li:nth-child(10){
+        left: 85%;
+        width: 150px;
+        height: 150px;
+        animation-delay: 0s;
+        animation-duration: 11s;
+    }
+
+
+
+    @keyframes animate {
+
+        0%{
+            transform: translateY(0) rotate(0deg);
+            opacity: 1;
+            border-radius: 0;
+        }
+
+        100%{
+            transform: translateY(-1000px) rotate(720deg);
+            opacity: 0;
+            border-radius: 50%;
+        }
+
+    }
+}

@@ -1,0 +1,93 @@
+.hobbies__linea{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 1.17rem;
+}
+
+.hobbies__box{
+    background: #d4dcff;
+    color: rgb(0, 0, 0);
+    width: calc((100% / 3) - 0.75rem);
+    margin: 0.25rem;
+    border-radius: 20%;
+    text-align: center;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 0.75rem 0.25rem rgb(10 10 141);
+}
+
+.hobbies__box ul{
+    padding: 0.25rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-content: space-around;
+}
+
+.hobbies__img{
+    height: 2.25rem;
+    display: flex;
+    align-content: center;
+    justify-content: space-around;
+    align-items: center;
+}
+.hobbies__img img{
+    height: 100%;
+}
+
+
+/*Tablet*/
+@media screen and (min-width: 768px) {
+
+    .hobbies__titulo{
+        font-size: 2rem;
+    }
+    .hobbies__box{
+        width: calc((100vw / 4) - 2rem);
+        height: calc((100vw / 4) - 2rem);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: stretch;
+    }
+
+    .hobbies__img{
+        height: 3rem;
+    }
+
+    .hobbies__linea{
+        align-items: center;
+    }
+     
+     .hobbies__nombre{
+        margin-top: 1rem;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+
+    .hobbies__box {
+        width: calc((100vw / 9) - 1rem);
+        height: calc((100vw / 9) - 1rem);
+        max-width: 7rem;
+        max-height: 7rem;
+        margin: auto 2rem;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .hobbies__linea {
+        justify-content:center;
+        margin-bottom: 2rem;
+    }
+
+    .hobbies__img {
+        height: 2.25rem;
+    }
+
+    .hobbies__nombre{
+        font-size: 1rem;
+        margin-top: 1rem;
+    }
+}
